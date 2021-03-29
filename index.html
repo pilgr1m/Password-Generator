@@ -1,23 +1,33 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>GeneratorPass</title>
 </head>
+
 <body>
+    <div class="inputBox">
 
-<div class="inputBox">
+        <h2>Random Password Generator</h2>
+        <div class="inputWrapper">
+            <input type="text" placeholder="press Generate" id="password" readonly />
+            <button id="copy" onclick=(copyToClipboard())>
+                <span class="tooltiptext" id="tooltip">Copy to <br>clipboard </span>
+            </button>
+        </div>
 
-    <h2>Random Password Generator App</h2>
-    <input type="text" placeholder="Create Password" id="password">
-    <div id="btn" onclick="getPassword();">Generate </div>
+        <div class="button" id="btn" onclick="generatePassword()">Generate </div>
 
-</div>
+        <div class="button" id="clean" onclick="cleanPassword();">Clean </div>
 
-<script src="script.js"></script>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -10,24 +10,36 @@ body{
     align-items:center;
     min-height: 100vh;
     background: #f8f8f8;
+
 }
 .inputBox{
+    text-align: center;
+    padding: 0 8px;
     position:relative;
-    width: 450px;
+    width: 440px;
 }
 .inputBox h2 {
-    font-size: 28px;
+    font-size: 26px;
     color: #333;
 }
+
+.inputBox .inputWrapper {
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid #000; */
+}
+
 .inputBox input {
     position:relative;
     width: 100%;
-    height: 60px;
+    height: 56px;
     border: none;
-    margin: 15px 0 20px;
+    margin: 20px 0 20px 0px;
     background: transparent;
     outline: none;
-    padding: 0 20px;
+    padding: 0 20px 5px 20px;
     font-size: 24px;
     letter-spacing: 4px;
     box-sizing:border-box;
@@ -38,17 +50,60 @@ body{
     inset -4px -4px 10px rgba(255,255,255,1),
     4px 4px 10px rgba(0,0,0,0.05);
 }
-.inputBox #btn{
+
+.inputBox input::placeholder{
+    font-size: 14px;
+}
+
+.inputBox .button{
     position:relative;
     cursor:pointer;
     color:#fff;
     background: #333;
-    font-size: 24px;
+    font-size: 22px;
     display:inline-block;
     padding: 10px 15px;
     border-radius: 8px;
     letter-spacing: 2px;
 }
-.inputBox #btn:active{
+
+.inputBox .button:active{
     background-color: #9c27b0;
 }
+
+#copy {
+    position: absolute;
+    top: 36px;
+    right: 16px;
+    display: inline-block;
+    background: transparent;
+    background-image: url("./icons_copy.svg");
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    outline: none;
+}
+  
+  #copy #tooltip {
+    visibility: hidden;
+    width: 86px;
+    background-color: rgb(51, 51, 51,0.65);
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 3px;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -50px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  #copy:hover #tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
